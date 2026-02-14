@@ -7,6 +7,10 @@ on:
       - "frontend/**"
       - ".github/workflows/deploy-frontend.yml"
 
+defaults:
+      run:
+        working-directory: frontend
+
 permissions:
   contents: read
   id-token: write
