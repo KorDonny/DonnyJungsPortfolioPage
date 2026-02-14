@@ -1,6 +1,8 @@
 # DonnyJungsPortfolioPage
 AWS Cloud + GitHub CI/CD practice
+## Architecture
 
+![Architecture](docs/images/FinalArchitecture.png)
 AWS Resources:
 - S3: Hosts the static portfolio website (frontend).
 - CloudFront (CDN): Caches and delivers the S3 site globally with HTTPS.
