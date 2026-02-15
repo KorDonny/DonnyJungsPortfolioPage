@@ -1,11 +1,24 @@
 from django.http import JsonResponse
 
-def health(request):
-    return JsonResponse({"status": "ok"})
-
-def content(request):
-    # 나중에 S3의 content.json을 읽거나, 여기서 간단히 응답
-    return JsonResponse({
-        "message": "hello from django",
-        "version": "v1"
-    })
+def projects(request):
+    data = {
+        "projects": [
+            {
+                "id": 1,
+                "title": "Portfolio Website",
+                "summary": "Next.js + S3/CloudFront + Django(App Runner) 구축",
+                "tags": ["Next.js", "AWS", "CloudFront", "Django"],
+                "url": "https://www.donnyjungsweb.dedyn.io",
+                "source": "https://github.com/KorDonny/DonnyJungsPortfolioPage"
+            },
+            {
+                "id": 2,
+                "title": "Network Monitoring Concept",
+                "summary": "중앙 서버에서 매장 PC 연결상태 모니터링 설계",
+                "tags": ["Network", "Monitoring", "SQL"],
+                "url": "",
+                "source": ""
+            }
+        ]
+    }
+    return JsonResponse(data)

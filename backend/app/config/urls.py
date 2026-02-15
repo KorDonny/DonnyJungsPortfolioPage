@@ -17,10 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from api.views import health, content
+from portfolio.views import projects
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("health", health),
-    path("api/content", content),
+    path("api/v1/projects", projects),
 ]
