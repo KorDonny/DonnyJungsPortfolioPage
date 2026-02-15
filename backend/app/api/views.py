@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 
+# 프론트엔드에서 API 호출시 백엔드에서 응답하는 데이터 셋을 스켈레톤으로 구현해 놓은 것
 def projects(request):
     data = {
         "projects": [
