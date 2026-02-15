@@ -1,13 +1,47 @@
-# dependencies
-node_modules/
-frontend/node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
 
-# next build outputs
-.next/
-frontend/.next/
-out/
-frontend/out/
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
 
-# env
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Testing / Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Secrets / dotenv
 .env
 .env.*
+*.pem
+*.key
+
+# Docker
+*.pid
