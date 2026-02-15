@@ -8,7 +8,7 @@ export default function ItemsPage() {
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/items")
+    fetch("/api/items")
       .then(async (r) => {
         const t = await r.text();
         if (!r.ok) throw new Error(t);
