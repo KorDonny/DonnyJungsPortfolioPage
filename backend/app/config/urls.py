@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+# app/config/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
@@ -25,6 +26,7 @@ def health(request):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/v1/projects", projects),
-    path("api/", include("portfolio.urls")),
+    path("health", health),                 # ✅ App Runner health check용 (/health)
+    path("api/v1/projects/", projects),     # ✅ 끝에 / 권장
+    path("api/", include("portfolio.urls")),# ✅ portfolio.urls가 “진짜 urls.py”일 때만
 ]
