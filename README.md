@@ -1,6 +1,6 @@
 # DonnyJungsPortfolioPage
 AWS Cloud + GitHub CI/CD practice
-Website address: https://www.donnysportfolio.
+Website address: https://www.donnyjungsweb.dedyn.io/
 
 ## Architecture
 
