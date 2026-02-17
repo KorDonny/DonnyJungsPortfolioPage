@@ -1,4 +1,6 @@
+// frontend/app/resume/page.tsx
 "use client";
+
 import { useEffect, useState } from "react";
 
 export default function ResumePage() {
@@ -6,11 +8,11 @@ export default function ResumePage() {
   const [err, setErr] = useState<string>("");
 
   useEffect(() => {
-    fetch("https://api.donnyjungsweb.dedyn.io/api/v1/assets/resume")
+    fetch("/api/assets/resume", { cache: "no-store" })
       .then(async (r) => {
-        const t = await r.text();
-        if (!r.ok) throw new Error(t);
-        return JSON.parse(t);
+        const j = await r.json().catch(() => null);
+        if (!r.ok) throw new Error(j?.detail ? JSON.stringify(j.detail) : JSON.stringify(j));
+        return j;
       })
       .then((j) => setUrl(j.url))
       .catch((e) => setErr(String(e?.message ?? e)));
@@ -22,8 +24,15 @@ export default function ResumePage() {
   return (
     <main style={{ padding: 24 }}>
       <h1>Resume</h1>
-      <p><a href={url} target="_blank" rel="noreferrer">Open in new tab</a></p>
-      <iframe src={url} style={{ width: "100%", height: "80vh", border: "1px solid #ddd" }} />
+      <p>
+        <a href={url} target="_blank" rel="noreferrer">
+          Open in new tab
+        </a>
+      </p>
+      <iframe
+        src={url}
+        style={{ width: "100%", height: "80vh", border: "1px solid #ddd" }}
+      />
     </main>
   );
 }
