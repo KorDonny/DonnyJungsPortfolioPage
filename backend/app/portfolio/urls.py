@@ -1,7 +1,6 @@
-# app/portfolio/urls.py
 from django.urls import path
-from . import views
+from .views import get_resume_signed_url
 
 urlpatterns = [
-    path("v1/projects/", views.projects),  # /api/v1/projects/ 로 맞추려면 아래 3) 참고
+    path("api/v1/assets/resume", get_resume_signed_url),
 ]
