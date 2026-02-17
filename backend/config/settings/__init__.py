@@ -1,4 +1,3 @@
-# backend/app/config/settings/__init__.py
 import os
 
 env = os.environ.get("DJANGO_ENV", "local").lower()
