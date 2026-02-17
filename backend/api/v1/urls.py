@@ -1,6 +1,6 @@
 from django.urls import path
 from django.http import JsonResponse
-from backend.api.v1 import views
+from api.v1 import views
 
 def health(request):
     return JsonResponse({"status": "ok"})
