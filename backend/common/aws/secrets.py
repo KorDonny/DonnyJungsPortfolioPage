@@ -1,4 +1,3 @@
-# backend/app/utils/secrets.py
 import json, boto3, os
 
 def get_secret_json():

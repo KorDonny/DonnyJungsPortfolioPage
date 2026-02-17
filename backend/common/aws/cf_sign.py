@@ -1,4 +1,3 @@
-# backend/app/utils/cf_sign.py
 import datetime
 from botocore.signers import CloudFrontSigner
 from cryptography.hazmat.primitives import serialization, hashes

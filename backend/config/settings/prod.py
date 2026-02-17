@@ -1,4 +1,3 @@
-# backend/app/config/settings/prod.py
 import os
 from .base import *
 
