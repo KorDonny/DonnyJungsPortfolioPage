@@ -26,5 +26,6 @@ def health(request):
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("health", health),                 # ✅ App Runner health check용 (/health)
-    path("api/", include("portfolio.urls")),# ✅ portfolio.urls가 “진짜 urls.py”일 때만
+    path("", include("apps.portfolio.urls")),
+    path("api/", include("api.urls"))
 ]
