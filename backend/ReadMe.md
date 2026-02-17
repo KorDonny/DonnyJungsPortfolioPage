@@ -7,28 +7,25 @@ Directory structure:
 
 - api/ #
 - - __init__.py
-- - admin.py #
-- - apps.py #
-- - models.py #
-- - tests.py #
-- - views.py #
-- - migrations/ #
+- - admin.py # allows default administrator page (/admin) to do CRUD by registering model via maintaining UI !Removed due to no use
+- - apps.py # configuration file to define this folder is Django app
+- - models.py # location to define DB table (model) !Removed due to no use
+- - urls.py # is routing file that connects URL directions and view
+- - migrations/ # location to save DB scheme changes log !Removed due to no use
 - - - __init__.py
 
-- apps/
-- - about/
-- - blog/
-- - contact/
-- - portfolio/
+- - tests/ # automative test code list
+
+- - v1/ # 
 - - - __init__.py
-- - - admin.py # allows default administrator page (/admin) to do CRUD by registering model via maintaining UI
-- - - apps.py # configuration file to define this folder is Django app
-- - - models.py # location to define DB table (model)
-- - - tests.py # automative test code
-- - - urls.py # is routing file that connects URL directions and view
 - - - views.py # logic that receives request and returns a response
-- - - migrations/ # location to save DB scheme changes log
-- - - - __init__.py
+- - - schemas.py # 
+- - - urls.py # 
+
+- services/
+- - __init__.py
+- - protects_store.py (skeleton json)
+- - signed_assets.py ()
 
 - common/
 - - aws/
