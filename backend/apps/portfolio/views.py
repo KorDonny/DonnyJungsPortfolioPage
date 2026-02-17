@@ -1,8 +1,8 @@
 # backend/app/views.py
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
-from utils.secrets import get_secret_json
-from utils.cf_sign import make_signed_url
+from backend.common.aws.secrets import get_secret_json
+from backend.common.aws.cf_sign import make_signed_url
 
 @require_GET
 def get_resume_signed_url(request):
