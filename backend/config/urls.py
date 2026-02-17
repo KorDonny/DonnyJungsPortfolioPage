@@ -24,5 +24,5 @@ def health(request):
 
 urlpatterns = [
     path("health", health),                 # ✅ App Runner health check용 (/health)
-    path("api/", include("api.urls"))
+    path("api/", include("api.urls")),
 ]
