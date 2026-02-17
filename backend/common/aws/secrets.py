@@ -20,7 +20,7 @@ def _fetch_secret_json_from_secrets_manager() -> Dict[str, Any]:
     """
     secret_id = os.environ["CLOUDFRONT_SECRET_ID"]
 
-    client = boto3.client("secretsmanager")
+    client = boto3.client("secretsmanager", region_name=os.environ["AWS_REGION"])
     resp = client.get_secret_value(SecretId=secret_id)
 
     # 대부분 SecretString 사용
