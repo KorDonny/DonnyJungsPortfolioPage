@@ -1,7 +1,7 @@
 from common.aws.secrets import get_secret_json
 from common.aws.cf_sign import make_signed_url
 
-RESUME_OBJECT_PATH = "/content/resume.pdf"
+RESUME_OBJECT_PATH = "/private/content/resume_en.pdf"
 RESUME_EXPIRES_SECONDS = 300
 
 

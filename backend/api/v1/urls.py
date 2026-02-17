@@ -7,5 +7,6 @@ def health(request):
 
 urlpatterns = [
     path("health", health),                 # ✅ App Runner health check용 (/health)
-    path("assets/resume", views.resume_signed_url)
+    path("assets/resume/", views.resume_signed_url),
+    path("projects/", views.projects),
 ]

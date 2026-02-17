@@ -44,6 +44,7 @@ dist/
 .env.*
 *.pem
 *.key
+*.secrets.local.json
 
 # Docker
 *.pid
